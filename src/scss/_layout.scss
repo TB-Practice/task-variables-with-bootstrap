@@ -1,0 +1,163 @@
+nav {
+  a {
+    color: $primary-color;
+  }
+}
+
+header {
+  height: $huge;
+  background-image: url('./../images/header.jpg');
+  background-size: cover;
+  text-align: center;
+
+  h1 {
+    position: relative;
+    top: 10%;
+    font-size: $small;
+    font-weight: bold;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  // width: 80% !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.card {
+  background-color: $border-color;
+  border: $border-size solid $border-color;
+  border-radius: 5px;
+  background-color: $card-bg;
+  padding: 10px;
+
+  .img {
+    background-size: cover;
+    height: $large;
+    width: 100%;
+    background-position: center;
+  }
+}
+
+.card:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: $tiny $medium;
+  width: 80%;
+  article {
+    border: $border-size solid $border-color;
+    padding: 10px;
+  }
+  aside {
+    padding: 10px;
+  }
+
+}
+
+footer {
+  background-color: $primary-color;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .justify-content-space-between {
+    display: flex;
+    flex-direction: row;
+    padding: $tiny;
+    justify-content: space-between;
+    width: 100%;
+  }
+  li {
+    list-style-type: none;
+    padding: $tiny;
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// main {
+//   flex-flow: row;
+//     aside {
+//       width: 80%;
+// }
+// article {
+//   width: 50%;
+//   }
+// }
+
+@media screen and (min-width: $desktop) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+    .card {
+      flex-basis: 40%;
+      
+      
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .card {
+    flex-flow: row nowrap !important;
+    // align-items: center;
+    width: 90% !important;
+    margin: 0.5rem;
+      &-text {
+        // padding: 0 $tiny $tiny $tiny;
+    }
+    img {
+      width: $large;
+      height: $large;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    article {
+      width: 33%;
+    }
+    aside {
+      width: 33%;
+    }
+  }
+  footer {
+    .justify-content-space-between {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
